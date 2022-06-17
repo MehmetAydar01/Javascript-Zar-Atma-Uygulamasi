@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zar Atma</title>
+    <!-- CSS -->
+    <style>
+
+        body {
+            text-align: center;
+        }
+
+        input[type="button"] {
+            cursor: pointer;
+            color: red;
+            font-weight: 700;
+            font-size: 24px;
+            padding: 20px;
+            margin: 20px 0 0 0;
+            background: linear-gradient(to right, yellow, blue);
+            border: 2px dashed aqua;
+            transition: all .7s ease;
+        }
+
+        input[type="button"]:hover {
+            color: yellow;
+            background: linear-gradient(to left, red, blue);
+            border: 2px dotted rgba(206, 9, 169);
+        }
+
+    </style>
+</head>
+<body>
+    
+    <input type="button" value="Zar Atmak İçin Tıklayınız" onclick="zar_at()">
+
+    <div id="zar1_yeri"></div>
+    <div id="zar2_yeri"></div>
+
+    <!-- Javascript -->
+    <script>
+
+        function zar_at() {
+            let zar1, zar2;
+            /* Math.random() methodunun, 1 - 6 arasında değer alması için, 6 ile çarpıp 1 ekliyoruz. Math.random() methodu, normalde 0 ile 1 arasında deger alıyor. */
+            zar1 = Math.floor(Math.random() * 6 + 1); 
+            zar2 = Math.floor(Math.random() * 6 + 1);
+            document.getElementById("zar1_yeri").innerHTML = "<img src=img/" + zar1 + ".jpg>";
+            document.getElementById("zar2_yeri").innerHTML ="<img src=img/" + zar2 + ".jpg>";
+        }
+
+
+    </script>
+</body>
+</html>
